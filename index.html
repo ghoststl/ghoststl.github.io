@@ -1,2 +1,72 @@
-hello world</br>
-ghoststl
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+#div1 div{ border:1px #000 solid; width:200px; height:200px; display:none;}
+.active{ background:red;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	(function($){
+
+		var defaults={
+			head:['aaaa','bbbb','cccc'],
+			body:['qqqq','wwww','eeee'],
+			events:'click'
+		}
+		var settings={};
+		var $parent=null;
+
+		function fnTab(opt){
+			settings=$.extend(settings,defaults,opt);
+			$parent=this;
+			create();
+			bind();
+		}
+
+		function create(){
+			for (var i = 0; i < settings.head.length; i++) {
+				var $input=$('<input type="button" value="'+settings.head[i]+'"/>');
+				if(i==0){
+					$input.attr('class','active')
+				}
+				$parent.append($input)
+			};
+
+			for (var i = 0; i < settings.body.length; i++) {
+				var $div=$('<div>'+settings.body[i]+'</div>');
+				if(i==0){
+					$div.show()
+				}
+				$parent.append($div);
+			};
+		}
+
+		function bind(){
+			$parent.find('input').on(settings.events,function(){
+				$(this).attr('class','active').siblings('input').attr('class','');
+				$parent.find('div').eq( $(this).index() ).show().siblings('div').hide();
+			})
+		}
+
+		$.fn.extend({
+			tabs:fnTab
+		})
+
+
+	})(jQuery)
+</script>
+<script type="text/javascript">
+	$(function(){
+
+		$('#div1').tabs({})
+
+	})
+</script>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
