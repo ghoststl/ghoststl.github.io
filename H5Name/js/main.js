@@ -5,7 +5,7 @@
   var canvas = document.querySelector('canvas');
   var ctx = canvas.getContext('2d');
   //var TEXT = 'HELLO WORLD';
-  var TEXT = '哈 哈 哈';
+  var TEXT = '薛 晶 晶';
   var WIDTH, HEIGHT;
   var mouseX = 1000,
     mouseY = 1000;
