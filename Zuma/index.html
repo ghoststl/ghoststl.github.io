@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<style>
+*{padding:0;margin: 0;}
+body{ background:black; color:white; font-size:30px;}
+#div1{ background:white;width: 600px;margin: 20px auto;}
+#btn1{font-size: 20px; font-family: '微软雅黑'; margin: 0 auto;display: block;}
+</style>
+<script src="main.js"></script>
+<body>
+	<div id="div1">
+	<canvas id="c1" width="600" height="600"></canvas>
+	</div>
+	<button id="btn1">有码,你懂得</button>
+</body>
+<script type="text/javascript">
+	var oBtn = document.getElementById('btn1');
+
+	oBtn.onclick = function(){
+		window.location = 'mosaic.html';
+	}
+</script>
+</html>
