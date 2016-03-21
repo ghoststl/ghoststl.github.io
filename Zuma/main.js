@@ -56,9 +56,9 @@ window.onload = function(){
 			oGC.shadowOffsetY = 5;
 			oGC.shadowColor = '#63397b';
 			oGC.shadowBlur = 5;
-			var w = oGC.measureText('比较low的祖玛，见谅').width;
+			var w = oGC.measureText('比较low的游戏').width;
 			var h = 60;
-			oGC.fillText('比较low的祖玛，见谅', (oC.width - w)/2 , 450 );
+			oGC.fillText('比较low的游戏', (oC.width - w)/2 , 450 );
 			oGC.restore();
 
 		},1000/60);
