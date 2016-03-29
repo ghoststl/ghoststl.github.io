@@ -444,7 +444,11 @@
 				aLi[i].style.transform = 'translate3D(' + aLi[i].maxX + 'px,' + aLi[i].maxY + 'px,' + aLi[i].maxZ + 'px) rotateY('+aLi[i].maxPhi+'rad) rotateX('+aLi[i].maxTheta+'rad)';
 			}
 			setTimeout(function(){
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.display = 'none';
+				}
 				for (var i = 0; i <= coneNum; i++) {
+					aLi[i].style.display = 'block';
 					aLi[i].className = 'one';
 					aLi[i].style.opacity = 1;
 					aLi[i].style.transform = 'translate3D(' + aLi[i].coneX + 'px,' + aLi[i].coneY + 'px,' + aLi[i].coneZ + 'px) rotateY('+aLi[i].conePhi+'rad) rotateX('+aLi[i].coneTheta+'rad)';
@@ -464,7 +468,11 @@
 
 			}
 			setTimeout(function(){
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.display = 'none';
+				}
 				for (var i = 0; i < columnNum; i++) {
+					aLi[i].style.display = 'block';
 					aLi[i].className = 'one';
 					aLi[i].style.opacity = 1;
 					aLi[i].style.transform = 'translate3D(' + aLi[i].columnX + 'px,' + aLi[i].columnY + 'px,' + aLi[i].columnZ + 'px) rotateY('+aLi[i].columnPhi+'rad) ';
@@ -483,7 +491,11 @@
 				aLi[i].style.transform = 'translate3D(' + aLi[i].maxX + 'px,' + aLi[i].maxY + 'px,' + aLi[i].maxZ + 'px) rotateY('+aLi[i].maxPhi+'rad) rotateX('+aLi[i].maxTheta+'rad)';
 			}
 			setTimeout(function(){
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.display = 'none';
+				}
 				for (var i = 0; i < columnNum; i++) {
+					aLi[i].style.display = 'block';
 					aLi[i].className = 'one';
 					aLi[i].style.opacity = 1;
 					aLi[i].style.transform = 'translate3D(' + aLi[i].columnX2 + 'px,' + aLi[i].columnY2 + 'px,' + aLi[i].columnZ2 + 'px) rotateY('+aLi[i].columnPhi2+'rad) ';
