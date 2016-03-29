@@ -326,6 +326,13 @@
 				alert('您输入的文字不得小于50或者大于350个');
 			}
 			else{
+				onOff2 = false;
+				oTextarea.value = '';
+				aBtn[1].className = '';
+				for (var i = 0; i < aA.length; i++) {
+					aA[i].className = '';
+				}
+				aA[0].className = 'active';
 				oUl.innerHTML = '';
 				star();
 				oText.style.transform = 'scale(0.5)';
